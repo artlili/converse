@@ -1,0 +1,12 @@
+.title {
+  font-size: rem(32);
+  @extend .lisa;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: rem(24);
+  @extend .lisa;
+  text-transform: uppercase;
+  color: $accent;
+}

@@ -1,0 +1,74 @@
+.delivery {
+
+  &__inner {
+
+    &::after {
+      content: '';
+      display: inline-block;
+      background: url(../images/general/car.png) center no-repeat;
+      background-size: cover;
+      max-width: 100vw;
+      width: 100%;
+      height: 150px;
+
+      @include mq('phone-wide') {
+        height: 300px;
+      }
+
+      @include mq('tablet') {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60%;
+        height: 500px;
+        background-position: bottom left;
+      }
+
+    }
+
+  }
+
+  &__head {
+    position: relative;
+  }
+
+  &__btn {
+    z-index: 0;
+    display: inline-block;
+
+    @include mq('tablet-wide') {
+      position: absolute;
+      right: 0;
+      z-index: 1;
+    }
+
+    .btn {
+      background: $white;
+      color: lighten($black, 50%);
+      text-transform: uppercase;
+      @extend .lisa;
+      height: rem(70);
+      line-height: rem(70);
+      padding: {
+        top: 0;
+        bottom: 0;
+        left: rem(35);
+        right: rem(35);
+      };
+
+      border-radius: 0;
+      cursor: pointer;
+      margin-right: rem(15);
+
+      @include mq('tablet-wide') {
+        margin-right: 0;
+        margin-left: rem(30);
+      }
+      
+      &.active {
+        background: $accent;
+        color: $white;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.top {
+
+  &__inner {
+    @include flex;
+    padding: {
+      top: rem(20);
+      bottom: rem(20);
+    };
+  }
+
+  &__logo {
+    margin: 0 auto;
+
+    @include mq('tablet') {
+      margin: 0;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    @include mq('tablet') {
+      display: block;
+    }
+
+    a {
+      text-transform: uppercase;
+      color: $black;
+      letter-spacing: rem(0.56);
+      display: inline-block;
+      padding: rem(12);
+
+      @include mq('tablet') {
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+
+      @include mq('desktop') {
+        padding: rem(25);
+
+        &:last-child {
+          padding-right: rem(25);
+        }
+      }
+
+      &:hover {
+        text-decoration: none;
+        opacity: 0.75;
+      }
+    }
+  }
+
+  &__phone {
+    display: none;
+
+    @include mq('tablet-wide') {
+      display: block;
+    }
+
+    .icon-phone {
+      @include size(12px);
+    }
+
+    span {
+      display: inline-block;
+      @extend .muller_bold;
+    }
+  }
+
+}

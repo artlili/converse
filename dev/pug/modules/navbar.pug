@@ -1,0 +1,31 @@
+.navbar
+  .container
+    .navbar__inner
+      .navbar__burger
+        .burger
+          span
+          span
+          span
+        | menu
+      .navbar__menu
+        a(href="#") СКИДКИ ДО 60%
+        a(href="#") МУЖЧИНАМ
+        a(href="#") ЖЕНЩИНАМ
+        a(href="#") ДЕТЯМ
+        a(href="#") НОВИНКИ
+      .navbar__right
+        .navbar__search
+          img.icon-search(src="static/images/general/search.png")
+        .navbar__selected
+          .heart
+            img.icon-heart(src="static/images/general/heart.png")
+            span.text Избранное:
+            span.num 1 
+            span.text товар
+        .navbar__basket
+          .basket
+            +icon('bag')
+            span.text корзина: 
+            span.num 0 
+            span.text товаров 
+          

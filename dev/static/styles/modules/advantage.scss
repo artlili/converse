@@ -1,0 +1,56 @@
+.advantage {
+
+  &__inner {
+    background: $white;
+    overflow: hidden;
+    padding: {
+      left: rem(15);
+      right: rem(15);
+    };
+  }
+
+  .advantage__item {
+    text-align: center;
+    padding: {
+      top: rem(39);
+      bottom: rem(38);
+    };
+    border-top: 1px solid $light;
+
+    @include mq('tablet-small') {
+      border-left: 1px solid $light;
+      &:nth-child(odd) {
+        border-left: transparent;
+      }
+    }
+
+    &:first-child {
+      border-top: transparent;
+    }
+
+    .icon {
+      margin-bottom: rem(36);
+      fill: $accent;
+
+      &-calendar {
+        width: rem(30);
+        height: rem(32);
+      }
+
+      &-phone_2 {
+        width: rem(31);
+        height: rem(30);
+      }
+
+      &-clock {
+        width: rem(29);
+        height: rem(29);
+      }
+
+      &-boot {
+        width: rem(43);
+        height: rem(24);
+      }
+    }
+  }
+}

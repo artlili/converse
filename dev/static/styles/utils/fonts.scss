@@ -1,0 +1,19 @@
+$font: ("Lisa": normal, "Muller Light": 300, "Muller": normal, "Muller Bold": bold);
+
+@each $name, $width in $font {
+  $font-name: str-replace(to-lower-case($name), ' ', '_');
+  $url: '../fonts/' + $font-name;
+  @font-face {
+      font-family: $name;
+      src:  url($url + '.woff') format('woff'),
+            url($url + '.woff2') format('woff2');
+      font-weight: $width;
+      font-style: normal;
+  }
+  .#{$font-name} {
+    font-family: $name;
+    font-weight: $width;
+    font-style: normal;
+  }
+
+}
